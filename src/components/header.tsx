@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Search, ShoppingCart, User, Menu, Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
+import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -28,7 +29,11 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-primary text-primary-foreground">
       {/* Top bar */}
       <div className="hidden md:block bg-background/10 text-xs">
-          <div className="container mx-auto flex h-8 items-center justify-end px-4">
+          <div className="container mx-auto flex h-8 items-center justify-between px-4">
+            {/* Added text on the left */}
+            <div className="text-white font-medium">
+                Get Up to 30% OFF Store wide – Limited time only
+            </div>
             <div className="flex items-center gap-4">
                 {topNavLinks.map(link => (
                     <Link key={link.href} href={link.href} className="transition-colors hover:text-white">
@@ -49,9 +54,13 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold" style={{color: '#FFD700'}}>
-              Smiles & Giftings
-            </span>
+             {/* Replaced text with image logo */}
+            <Image
+              src="https://smilesgiftings.com/wp-content/uploads/2024/07/site-icon.png"
+              alt="Smiles & Giftings Logo"
+              width={150} // Adjust width as needed
+              height={40} // Adjust height as needed
+            />
           </Link>
           <nav className="hidden lg:flex items-center gap-6">
             {mainNavLinks.map((link) => (
@@ -105,9 +114,13 @@ export function Header() {
                 <SheetContent side="left" className="bg-primary text-primary-foreground">
                 <div className="flex flex-col gap-6 p-6">
                     <Link href="/" className="flex items-center gap-2 mb-4">
-                        <span className="text-2xl font-bold" style={{color: '#FFD700'}}>
-                            Smiles & Giftings
-                        </span>
+                       {/* Replaced text with image logo in mobile view */}
+                        <Image
+                          src="https://smilesgiftings.com/wp-content/uploads/2024/07/site-icon.png"
+                          alt="Smiles & Giftings Logo"
+                          width={150} // Adjust width as needed
+                          height={40} // Adjust height as needed
+                        />
                     </Link>
                     <nav className="flex flex-col gap-4">
                     {[...mainNavLinks, ...topNavLinks].map((link) => (
