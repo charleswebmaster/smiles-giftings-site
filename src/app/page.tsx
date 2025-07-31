@@ -42,7 +42,7 @@ export default function Home() {
     <div className="space-y-12 md:space-y-20 lg:space-y-24">
       <section className="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-end text-black">
         <Image
-          src="https://firebasestorage.googleapis.com/v0/b/project-417163869819.appspot.com/o/images%2F1e56b3e9-3837-4b13-9f5c-8979e5192135?alt=media&token=e937812f-981c-4b36-a81d-e9c5e2d63309"
+          src="https://smilesgiftings.com/wp-content/uploads/2024/01/banner-1.png"
           alt="Two smiling people wearing printed shirts"
           layout="fill"
           objectFit="cover"
