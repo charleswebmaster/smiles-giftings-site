@@ -46,7 +46,7 @@ export default function Home() {
           alt="Two smiling people wearing printed shirts"
           layout="fill"
           objectFit="cover"
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-10"
           data-ai-hint="smiling couple shirts"
           priority
         />

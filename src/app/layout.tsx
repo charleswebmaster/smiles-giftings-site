@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
-        <div className="bg-[#1e4620] text-center text-white text-sm font-medium py-2 px-4 uppercase">
-          Get Up to 30% OFF Store wide – Limited time only
-        </div>
+        {/* <div className="bg-transparent text-center text-white text-sm font-medium py-2 px-4 uppercase">
+          30% OFF Store wide – Limited time only
+        </div> */}
         <CartProvider>
           <div className="flex min-h-screen flex-col">
             <Header />
