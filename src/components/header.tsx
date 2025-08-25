@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -18,8 +19,8 @@ const topNavLinks = [
 ];
 
 const mainNavLinks = [
-  { href: '#', label: 'Create' },
-  { href: '/products', label: 'Shop' },
+  { href: '/create', label: 'Create' },
+  { href: '/shop', label: 'Shop' },
 ];
 
 export function Header() {
@@ -36,7 +37,7 @@ export function Header() {
             </div>
             <div className="flex items-center gap-4">
                 {topNavLinks.map(link => (
-                    <Link key={link.href} href={link.href} className="transition-colors hover:text-white">
+                    <Link key={link.label} href={link.href} className="transition-colors hover:text-white">
                         {link.label}
                     </Link>
                 ))}
@@ -99,7 +100,7 @@ export function Header() {
                   {cartCount}
                 </Badge>
               )}
-              <span className="hidden md:inline ml-2 font-semibold">₦{totalPrice.toFixed(2)}</span>
+              <span className="hidden md:inline ml-2 font-semibold">₦{totalPrice.toLocaleString('en-US')}</span>
             </Button>
           </Link>
         
@@ -125,7 +126,7 @@ export function Header() {
                     <nav className="flex flex-col gap-4">
                     {[...mainNavLinks, ...topNavLinks].map((link) => (
                         <Link
-                        key={link.href}
+                        key={link.label}
                         href={link.href}
                         className="text-lg font-medium transition-colors hover:text-white"
                         >

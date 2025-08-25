@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -52,9 +53,9 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="w-full flex justify-between items-center mt-3">
           <div className="flex flex-col">
              {product.onSale && product.originalPrice && (
-                <p className="text-sm text-muted-foreground line-through">₦{product.originalPrice.toFixed(2)}</p>
+                <p className="text-sm text-muted-foreground line-through">₦{product.originalPrice.toLocaleString('en-US')}</p>
              )}
-             <p className="font-bold text-lg text-primary">₦{product.price.toFixed(2)}</p>
+             <p className="font-bold text-lg text-primary">₦{product.price.toLocaleString('en-US')}</p>
           </div>
           <Button size="sm" onClick={handleAddToCart} variant="outline">
             <Plus className="h-4 w-4" />

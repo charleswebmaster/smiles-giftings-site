@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -98,13 +99,13 @@ export default function CheckoutPage() {
                       <p className="font-semibold">{product.name}</p>
                       <p className="text-sm text-muted-foreground">Quantity: {quantity}</p>
                     </div>
-                    <p className="font-medium">${(product.price * quantity).toFixed(2)}</p>
+                    <p className="font-medium">₦{(product.price * quantity).toLocaleString('en-US')}</p>
                   </div>
                 ))}
                 <Separator />
                 <div className="flex justify-between">
                   <p>Subtotal</p>
-                  <p>${totalPrice.toFixed(2)}</p>
+                  <p>₦{totalPrice.toLocaleString('en-US')}</p>
                 </div>
                 <div className="flex justify-between">
                   <p>Shipping</p>
@@ -113,7 +114,7 @@ export default function CheckoutPage() {
                 <Separator />
                 <div className="flex justify-between font-bold text-lg">
                   <p>Total</p>
-                  <p>${totalPrice.toFixed(2)}</p>
+                  <p>₦{totalPrice.toLocaleString('en-US')}</p>
                 </div>
               </div>
             </CardContent>

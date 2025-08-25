@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Star, StarHalf } from 'lucide-react';
@@ -59,7 +60,7 @@ export default async function ProductDetailPage({ params }: { params: { id: stri
         <div>
           <h1 className="font-headline text-4xl lg:text-5xl font-bold">{product.name}</h1>
           <div className="mt-4 flex items-center gap-4">
-            <p className="text-3xl font-bold text-primary">${product.price.toFixed(2)}</p>
+            <p className="text-3xl font-bold text-primary">₦{product.price.toLocaleString('en-US')}</p>
             <div className="flex items-center gap-2">
               {renderStars(product.rating.rate)}
               <span className="text-sm text-muted-foreground">({product.rating.count} reviews)</span>
